@@ -8,6 +8,7 @@ Implements a continuous token that can be bonded to curators and subtopic for cu
 contract CurationToken is ContinuousToken {
 
     //token holder -> curator -> sub-topic -> amount
+    // https://ethereum.stackexchange.com/questions/2397/internal-compiler-error-accessors-for-mapping-with-dynamically-sized-keys-not-y
     mapping (address => mapping (address => mapping(string => uint256))) bonds;
     mapping (address => mapping(string => uint256)) totalBondsPerCuratorPerSubtopic;
 
