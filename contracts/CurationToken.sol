@@ -8,8 +8,8 @@ Implements a continuous token that can be bonded to curators and subtopic for cu
 contract CurationToken is ContinuousToken {
 
     //token holder -> curator -> sub-topic -> amount
-    mapping (address => mapping (address => mapping(string => uint256))) public bonds;
-    mapping (address => mapping(string => uint256)) public totalBondsPerCuratorPerSubtopic;
+    mapping (address => mapping (address => mapping(string => uint256))) bonds;
+    mapping (address => mapping(string => uint256)) totalBondsPerCuratorPerSubtopic;
 
     uint256 public totalBonded = 0;
 

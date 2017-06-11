@@ -12,12 +12,12 @@ contract Curator {
 
     function back(address _token, string _subtopic, string _info) {
         CurationToken token = CurationToken(_token);
-        LogBacking(msg.sender, _info, token.totalBondsPerCuratorPerSubtopic(msg.sender, _subtopic), token.totalBonded());
+//        LogBacking(msg.sender, _info, token.totalBondsPerCuratorPerSubtopic(msg.sender, _subtopic), token.totalBonded());
     }
 
     function revoke(address _token, string _subtopic, string _info) {
         CurationToken token  = CurationToken(_token);
-        LogRevoke(msg.sender, _info, token.totalBondsPerCuratorPerSubtopic(msg.sender, _subtopic), token.totalBonded());
+//        LogRevoke(msg.sender, _info, token.totalBondsPerCuratorPerSubtopic(msg.sender, _subtopic), token.totalBonded());
     }
 
     event LogBacking(address curator, string info, uint256 bondedAmount, uint256 totalBonded);
