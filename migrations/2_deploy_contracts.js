@@ -1,8 +1,8 @@
-var ConvertLib = artifacts.require("./ConvertLib.sol");
-var MetaCoin = artifacts.require("./MetaCoin.sol");
+var ERC20Token = artifacts.require("./ERC20Token.sol");
+var CurationMarkets = artifacts.require("./CurationMarkets.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(MetaCoin);
+  deployer.deploy(ERC20Token);
+  deployer.link(ERC20Token, CurationMarkets);
+  deployer.deploy(CurationMarkets);
 };
